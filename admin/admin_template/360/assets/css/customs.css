@@ -1,0 +1,13 @@
+.ask-content > h4,h3,h2,h1 {
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.ask-content > p {
+    text-align: justify;
+}
+
+.ask-content > ul {
+    list-style: disc;
+    margin-left: 20px;
+}

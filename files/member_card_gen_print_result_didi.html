@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="/admin/modules/membership/card/assets/tailwind.min.css" rel="stylesheet">
+
+    <title>Assalamualaikum Mas Ilmi</title>
+    <style>
+        ol, ul {list-style: square;}
+        .box {
+            width: 325px; /* 325.03937008 = 8.6cm */
+            height: 204px; /*204.09448819px = 5.4cm */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .box-front {
+            background: #ffffff url('/files/membercard/c2.jpg.jpg.jpg') no-repeat left;
+            background-size: cover;
+            padding: 0.5rem;
+        }
+        .box-back {
+            background: #ffffff url('/files/membercard/c1.jpg.jpg.jpg') no-repeat left;
+            background-size: cover;
+            padding: 1rem;
+        }
+        .biodata {
+            font-size: 10px;
+        }
+        .rules {
+            font-size: 13px;
+            color: #000;
+        }
+        .footer {
+            font-size: 7px;
+        }
+        .sign {
+            top: 10px;
+            left: -10px;
+        }
+        .sign .stamp {
+            width: 30px;
+        }
+        .sign .signature {
+            width: 30px;
+            margin-left: -10px;
+        }
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+
+            .no-margin-on-print {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .box {
+                box-shadow: none;
+                border: 1px solid #f1f1f1;
+            }
+            
+            body.bg-gray-200 {
+                background: transparent;
+            }
+            
+            body.p-4 {
+                padding: 0;
+            }
+            
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+    <script src="/admin/modules/membership/card/assets/JsBarcode.code128.min.js"></script>
+    <script src="/admin/modules/membership/card/assets/qrcode.min.js"></script>
+  </head>
+  <body class="bg-gray-200 p-4">
+    <div class="fixed left-0 top-0 z-50 pt-4 pl-3 no-print">
+        <a class="w-12 h-12 p-3 shadow-lg flex-no-shrink flex flex-col justify-center items-center text-center rounded-full bg-green-500 hover:bg-green-600 no-underline text-white"
+           href="#"
+           title="print this card"
+           onclick="window.print()">
+            <svg
+                    class="fill-current w-12 h-12"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="458.6px"
+                    height="482.5px" viewBox="0 0 458.6 482.5"
+                    style="enable-background:new 0 0 458.6 482.5;"
+                    xml:space="preserve">
+                <path d="M387.3,98.9h-12.4V71.3c0-39.3-32-71.3-71.3-71.3H153.9c-39.3,0-71.3,32-71.3,71.3v27.6H71.3
+                    C32,98.9,0,130.9,0,170.2v115c0,39.3,32,71.3,71.3,71.3h11.2v90.4c0,19.6,16,35.6,35.6,35.6h221.1c19.6,0,35.6-16,35.6-35.6v-90.4
+                    h12.5c39.3,0,71.3-32,71.3-71.3v-115C458.6,130.9,426.6,98.9,387.3,98.9z M109.5,71.3c0-24.4,19.9-44.3,44.3-44.3h149.6
+                    c24.4,0,44.3,19.9,44.3,44.3v27.6H109.5V71.3z M347.8,447.1c0,4.7-3.9,8.6-8.6,8.6H118.1c-4.7,0-8.6-3.9-8.6-8.6V298h238.3V447.1z
+                     M431.6,285.3c0,24.4-19.9,44.3-44.3,44.3h-12.4V298h17.8c7.5,0,13.5-6,13.5-13.5s-6-13.5-13.5-13.5h-330c-7.5,0-13.5,6-13.5,13.5
+                    s6,13.5,13.5,13.5h19.9v31.6H71.3c-24.4,0-44.3-19.9-44.3-44.3v-115c0-24.4,19.9-44.3,44.3-44.3h316c24.4,0,44.3,19.9,44.3,44.3
+                    V285.3z M128.7,350.9c0-7.5,6-13.5,13.5-13.5h171.9c7.5,0,13.5,6,13.5,13.5s-6,13.5-13.5,13.5H142.2
+                    C134.8,364.4,128.7,358.4,128.7,350.9z M328.6,406.1c0,7.5-6,13.5-13.5,13.5H143.2c-7.5,0-13.5-6-13.5-13.5s6-13.5,13.5-13.5h172
+                    C322.6,392.6,328.6,398.6,328.6,406.1z M400.5,165.4c0,7.5-6,13.5-13.5,13.5h-27.4c-7.5,0-13.5-6-13.5-13.5s6-13.5,13.5-13.5H387
+                    C394.5,151.9,400.5,157.9,400.5,165.4z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="flex flex-row justify-center pb-2"><div class="box box-front flex flex-col justify-center items-center">
+    <div class="rules w-full h-full rounded opacity-75 p-2 flex flex-col justify-between">
+        <div>
+            <h1 class="font-bold text-xs">Tata Tertib Perpustakaan</h1>
+            <div>Kartu dibawa setiap berkunjung</div><div>
+Maksimum peminjaman 2 buku selama 1 minggu</div><div>
+Kartu ini tidak dipinjamkan kepada orang lain</div><div>
+Kartu ini berlaku selama menjadi siswa/siswi.</div><div></div>
+        </div>
+        <div>
+        <strong>Perpustakaan Ulil Albab</strong>
+        </div>
+    </div>
+</div><div class="w-2" style="width:8px"></div><div class="box box-back flex flex-col justify-between">
+    <div class="flex justify-between">
+        <div class="flex flex-col pl-12">
+            <h1 style="color:#000;font-size:12pt" class="text-sm font-bold">NIHAYATUL KHUSNAH</h1>
+            <span style="color:#000;font-size:12pt" class="text-xs">1920100415</span>
+        </div>
+        <div style="padding:5px;background:#fff;display:block;width:60px;height:50px" id="qrcode-1920100415" class="w-10 h-10 rounded"></div>
+    </div>
+    <div class="flex">
+        <div class="flex items-end w-24"><img style="display:block;width:80px;height:auto" class="rounded" src="/images/persons/avatar.jpg" alt=""></div>
+        <div class="flex-1 flex flex-col items-end">
+            <div class="flex-1 flex flex-col justify-center items-end text-right biodata">
+                <div class="flex flex-row-reverse items-center pb-1"><img class="w-3 h-3" src="/admin/modules/membership/card/assets/002-home.png" alt=""><span class="px-2 leading-none">Dusun Sukareja RT/Rw 02/03 Ds. Lempuyang kec. Anjatan Kab. Cirebon</span></div><div class="flex flex-row-reverse items-center pb-1"><img class="w-3 h-3" src="/admin/modules/membership/card/assets/003-boss.png" alt=""><span class="px-2 leading-none">Siswa</span></div><div class="flex flex-row-reverse items-center pb-1"><img class="w-3 h-3" src="/baru/files/membercard/001-gmail.png.png" alt=""><span class="px-2 leading-none">2020-09-24</span></div>
+            </div>
+            <div style="display:flex;width:180px;height:40px" class="h-8 overflow-hidden flex justify-end -mr-2">
+                <svg id="barcode-1920100415"></svg>
+            </div>
+        </div>
+    </div>
+</div>
+<script>JsBarcode("#barcode-1920100415", "1920100415", { height: 60, displayValue: false });</script>
+<script>new QRCode(document.getElementById("qrcode-1920100415"), {text: "1920100415", width: "60", height: "50"});</script></div>
+    <div class="no-print pt-4 text-right">
+        <hr>
+        
+        </div>
+    </div>
+  </body>
+</html>
